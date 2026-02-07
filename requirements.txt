@@ -1,0 +1,28 @@
+# Encrypted File Vault - Dependencies
+# ====================================
+# Install with: pip install -r requirements.txt
+
+# Core Cryptographic Library
+# --------------------------
+# The 'cryptography' library provides:
+# - AES-GCM authenticated encryption (AEAD)
+# - PBKDF2 key derivation function
+# - Secure random number generation
+# - OpenSSL bindings for performance
+cryptography>=41.0.0
+
+# Argon2 Password Hashing (Recommended)
+# -------------------------------------
+# Argon2 is the winner of the Password Hashing Competition (2015)
+# Provides memory-hard key derivation resistant to GPU/ASIC attacks
+# If not installed, the tool falls back to PBKDF2
+argon2-cffi>=23.1.0
+
+# Development Dependencies (Optional)
+# ------------------------------------
+# Uncomment for development/testing:
+# pytest>=7.4.0
+# pytest-cov>=4.1.0
+# black>=23.7.0
+# mypy>=1.5.0
+# bandit>=1.7.5  # Security linter
